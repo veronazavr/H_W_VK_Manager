@@ -1,15 +1,19 @@
 package ru.netology.domain;
 
+import java.util.Date;
+
 public class Post {
     private int id;
     private int userId;
     private int ownerId;
     private int createdBy;
-    private int data;
+    private Date dataCreate;
     private String textPost;
     private int replyOwnerId;
     private int replyPostId;
     private int friendsOnly;
+
+
 
     public String comments(int count, boolean canPost, boolean groupsCanPost, boolean canOpen) {
         return null;
@@ -88,12 +92,12 @@ public class Post {
         this.createdBy = createdBy;
     }
 
-    public int getData() {
-        return data;
+    public Date getDataCreate() {
+        return dataCreate;
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public void setDataCreate(Date dataCreate) {
+        this.dataCreate = dataCreate;
     }
 
     public String getTextPost() {

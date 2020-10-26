@@ -1,64 +1,41 @@
 package ru.netology.domain;
 
-import java.util.Date;
-
 public class Post {
-    private int id;
-    private int userId;
-    private int ownerId;
-    private int createdBy;
-    private Date dataCreate;
-    private String textPost;
-    private int replyOwnerId;
-    private int replyPostId;
-    private int friendsOnly;
 
 
-
-    public String comments(int count, boolean canPost, boolean groupsCanPost, boolean canOpen) {
-        return null;
-    }
-
-    private String copyright;
-
-    public String likes(int count, boolean userLikes, boolean canLike, boolean canPublish) {
-        return null;
-    }
-
-    public String reposts (int count, boolean userReposted) {
-        return null;
-    }
-
-    public String views (int count) {
-        return null;
-    }
-
-    private String postType;
-
-    public String geo (String type, String coordinates, String place) {
-        return null;
-    }
-
-    private int signerId;
-    private int canPin;
-    private int canDelete;
-    private int canEdit;
-
-    private int isPinned;
-    private int markedAsAds;
-    private boolean isFavorite;
-    private int postponedId;
-
-    private String subjectId;
-    private String urlSource;
-    private boolean signatureView;
-
-    // Social networks
-    private int likeSum;
-    private int commentSum;
-    private int shareSum;
-    private int viewSum;
-
+        private int id;
+        private int ownerID;
+        private int fromID;
+        private int createdBy;
+        private int date;
+        private String mainText;
+        private int replyOwnerID;
+        private int replyPostID;
+        private boolean friendsOnly;
+        private String commentButton;
+        private int commentCount;
+        private boolean commentCanPost;
+        private boolean commentCanClose;
+        private boolean commentCanOpen;
+        private String copyright;
+        private int likesCount;
+        private boolean userLikes;
+        private boolean canLike;
+        private boolean canPublish;
+        private int repostsCount;
+        private boolean userReposted;
+        private int viewsCount;
+        private String postType;
+        private String postSource;
+        private String geo;
+        private int signerID;
+        private boolean canPin;
+        private boolean canDelete;
+        private boolean canEdit;
+        private boolean pinned;
+        private boolean markedAsAd;
+        private boolean favorite;
+        private int postponedID;
 
     public int getId() {
         return id;
@@ -68,20 +45,20 @@ public class Post {
         this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getOwnerID() {
+        return ownerID;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setOwnerID(int ownerID) {
+        this.ownerID = ownerID;
     }
 
-    public int getOwnerId() {
-        return ownerId;
+    public int getFromID() {
+        return fromID;
     }
 
-    public void setOwnerId(int ownerId) {
-        this.ownerId = ownerId;
+    public void setFromID(int fromID) {
+        this.fromID = fromID;
     }
 
     public int getCreatedBy() {
@@ -92,44 +69,84 @@ public class Post {
         this.createdBy = createdBy;
     }
 
-    public Date getDataCreate() {
-        return dataCreate;
+    public int getDate() {
+        return date;
     }
 
-    public void setDataCreate(Date dataCreate) {
-        this.dataCreate = dataCreate;
+    public void setDate(int date) {
+        this.date = date;
     }
 
-    public String getTextPost() {
-        return textPost;
+    public String getMainText() {
+        return mainText;
     }
 
-    public void setTextPost(String textPost) {
-        this.textPost = textPost;
+    public void setMainText(String mainText) {
+        this.mainText = mainText;
     }
 
-    public int getReplyOwnerId() {
-        return replyOwnerId;
+    public int getReplyOwnerID() {
+        return replyOwnerID;
     }
 
-    public void setReplyOwnerId(int replyOwnerId) {
-        this.replyOwnerId = replyOwnerId;
+    public void setReplyOwnerID(int replyOwnerID) {
+        this.replyOwnerID = replyOwnerID;
     }
 
-    public int getReplyPostId() {
-        return replyPostId;
+    public int getReplyPostID() {
+        return replyPostID;
     }
 
-    public void setReplyPostId(int replyPostId) {
-        this.replyPostId = replyPostId;
+    public void setReplyPostID(int replyPostID) {
+        this.replyPostID = replyPostID;
     }
 
-    public int getFriendsOnly() {
+    public boolean isFriendsOnly() {
         return friendsOnly;
     }
 
-    public void setFriendsOnly(int friendsOnly) {
+    public void setFriendsOnly(boolean friendsOnly) {
         this.friendsOnly = friendsOnly;
+    }
+
+    public String getCommentButton() {
+        return commentButton;
+    }
+
+    public void setCommentButton(String commentButton) {
+        this.commentButton = commentButton;
+    }
+
+    public int getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(int commentCount) {
+        this.commentCount = commentCount;
+    }
+
+    public boolean isCommentCanPost() {
+        return commentCanPost;
+    }
+
+    public void setCommentCanPost(boolean commentCanPost) {
+        this.commentCanPost = commentCanPost;
+    }
+
+    public boolean isCommentCanClose() {
+        return commentCanClose;
+    }
+
+    public void setCommentCanClose(boolean commentCanClose) {
+        this.commentCanClose = commentCanClose;
+    }
+
+    public boolean isCommentCanOpen() {
+        return commentCanOpen;
+    }
+
+    public void setCommentCanOpen(boolean commentCanOpen) {
+        this.commentCanOpen = commentCanOpen;
     }
 
     public String getCopyright() {
@@ -140,6 +157,62 @@ public class Post {
         this.copyright = copyright;
     }
 
+    public int getLikesCount() {
+        return likesCount;
+    }
+
+    public void setLikesCount(int likesCount) {
+        this.likesCount = likesCount;
+    }
+
+    public boolean isUserLikes() {
+        return userLikes;
+    }
+
+    public void setUserLikes(boolean userLikes) {
+        this.userLikes = userLikes;
+    }
+
+    public boolean isCanLike() {
+        return canLike;
+    }
+
+    public void setCanLike(boolean canLike) {
+        this.canLike = canLike;
+    }
+
+    public boolean isCanPublish() {
+        return canPublish;
+    }
+
+    public void setCanPublish(boolean canPublish) {
+        this.canPublish = canPublish;
+    }
+
+    public int getRepostsCount() {
+        return repostsCount;
+    }
+
+    public void setRepostsCount(int repostsCount) {
+        this.repostsCount = repostsCount;
+    }
+
+    public boolean isUserReposted() {
+        return userReposted;
+    }
+
+    public void setUserReposted(boolean userReposted) {
+        this.userReposted = userReposted;
+    }
+
+    public int getViewsCount() {
+        return viewsCount;
+    }
+
+    public void setViewsCount(int viewsCount) {
+        this.viewsCount = viewsCount;
+    }
+
     public String getPostType() {
         return postType;
     }
@@ -148,125 +221,83 @@ public class Post {
         this.postType = postType;
     }
 
-    public int getSignerId() {
-        return signerId;
+    public String getPostSource() {
+        return postSource;
     }
 
-    public void setSignerId(int signerId) {
-        this.signerId = signerId;
+    public void setPostSource(String postSource) {
+        this.postSource = postSource;
     }
 
-    public int getCanPin() {
+    public String getGeo() {
+        return geo;
+    }
+
+    public void setGeo(String geo) {
+        this.geo = geo;
+    }
+
+    public int getSignerID() {
+        return signerID;
+    }
+
+    public void setSignerID(int signerID) {
+        this.signerID = signerID;
+    }
+
+    public boolean isCanPin() {
         return canPin;
     }
 
-    public void setCanPin(int canPin) {
+    public void setCanPin(boolean canPin) {
         this.canPin = canPin;
     }
 
-    public int getCanDelete() {
+    public boolean isCanDelete() {
         return canDelete;
     }
 
-    public void setCanDelete(int canDelete) {
+    public void setCanDelete(boolean canDelete) {
         this.canDelete = canDelete;
     }
 
-    public int getCanEdit() {
+    public boolean isCanEdit() {
         return canEdit;
     }
 
-    public void setCanEdit(int canEdit) {
+    public void setCanEdit(boolean canEdit) {
         this.canEdit = canEdit;
     }
 
-    public int getIsPinned() {
-        return isPinned;
+    public boolean isPinned() {
+        return pinned;
     }
 
-    public void setIsPinned(int isPinned) {
-        this.isPinned = isPinned;
+    public void setPinned(boolean pinned) {
+        this.pinned = pinned;
     }
 
-    public int getMarkedAsAds() {
-        return markedAsAds;
+    public boolean isMarkedAsAd() {
+        return markedAsAd;
     }
 
-    public void setMarkedAsAds(int markedAsAds) {
-        this.markedAsAds = markedAsAds;
+    public void setMarkedAsAd(boolean markedAsAd) {
+        this.markedAsAd = markedAsAd;
     }
 
     public boolean isFavorite() {
-        return isFavorite;
+        return favorite;
     }
 
     public void setFavorite(boolean favorite) {
-        isFavorite = favorite;
+        this.favorite = favorite;
     }
 
-    public int getPostponedId() {
-        return postponedId;
+    public int getPostponedID() {
+        return postponedID;
     }
 
-    public void setPostponedId(int postponedId) {
-        this.postponedId = postponedId;
-    }
-
-    public String getSubjectId() {
-        return subjectId;
-    }
-
-    public void setSubjectId(String subjectId) {
-        this.subjectId = subjectId;
-    }
-
-    public String getUrlSource() {
-        return urlSource;
-    }
-
-    public void setUrlSource(String urlSource) {
-        this.urlSource = urlSource;
-    }
-
-    public boolean isSignatureView() {
-        return signatureView;
-    }
-
-    public void setSignatureView(boolean signatureView) {
-        this.signatureView = signatureView;
-    }
-
-    public int getLikeSum() {
-        return likeSum;
-    }
-
-    public void setLikeSum(int likeSum) {
-        this.likeSum = likeSum;
-    }
-
-    public int getCommentSum() {
-        return commentSum;
-    }
-
-    public void setCommentSum(int commentSum) {
-        this.commentSum = commentSum;
-    }
-
-    public int getShareSum() {
-        return shareSum;
-    }
-
-    public void setShareSum(int shareSum) {
-        this.shareSum = shareSum;
-    }
-
-    public int getViewSum() {
-        return viewSum;
-    }
-
-    public void setViewSum(int viewSum) {
-        this.viewSum = viewSum;
+    public void setPostponedID(int postponedID) {
+        this.postponedID = postponedID;
     }
 }
-
-

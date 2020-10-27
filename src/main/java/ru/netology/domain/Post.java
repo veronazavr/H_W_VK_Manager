@@ -12,19 +12,11 @@ public class Post {
         private int replyOwnerID;
         private int replyPostID;
         private boolean friendsOnly;
-        private String commentButton;
-        private int commentCount;
-        private boolean commentCanPost;
-        private boolean commentCanClose;
-        private boolean commentCanOpen;
         private String copyright;
-        private int likesCount;
-        private boolean userLikes;
-        private boolean canLike;
-        private boolean canPublish;
-        private int repostsCount;
         private boolean userReposted;
+        private int repostsCount;
         private int viewsCount;
+        private String countViewsImageUrl;
         private String postType;
         private String postSource;
         private String geo;
@@ -32,10 +24,11 @@ public class Post {
         private boolean canPin;
         private boolean canDelete;
         private boolean canEdit;
-        private boolean pinned;
+        private boolean isPinned;
         private boolean markedAsAd;
         private boolean favorite;
         private int postponedID;
+
 
     public int getId() {
         return id;
@@ -109,46 +102,6 @@ public class Post {
         this.friendsOnly = friendsOnly;
     }
 
-    public String getCommentButton() {
-        return commentButton;
-    }
-
-    public void setCommentButton(String commentButton) {
-        this.commentButton = commentButton;
-    }
-
-    public int getCommentCount() {
-        return commentCount;
-    }
-
-    public void setCommentCount(int commentCount) {
-        this.commentCount = commentCount;
-    }
-
-    public boolean isCommentCanPost() {
-        return commentCanPost;
-    }
-
-    public void setCommentCanPost(boolean commentCanPost) {
-        this.commentCanPost = commentCanPost;
-    }
-
-    public boolean isCommentCanClose() {
-        return commentCanClose;
-    }
-
-    public void setCommentCanClose(boolean commentCanClose) {
-        this.commentCanClose = commentCanClose;
-    }
-
-    public boolean isCommentCanOpen() {
-        return commentCanOpen;
-    }
-
-    public void setCommentCanOpen(boolean commentCanOpen) {
-        this.commentCanOpen = commentCanOpen;
-    }
-
     public String getCopyright() {
         return copyright;
     }
@@ -156,39 +109,6 @@ public class Post {
     public void setCopyright(String copyright) {
         this.copyright = copyright;
     }
-
-    public int getLikesCount() {
-        return likesCount;
-    }
-
-    public void setLikesCount(int likesCount) {
-        this.likesCount = likesCount;
-    }
-
-    public boolean isUserLikes() {
-        return userLikes;
-    }
-
-    public void setUserLikes(boolean userLikes) {
-        this.userLikes = userLikes;
-    }
-
-    public boolean isCanLike() {
-        return canLike;
-    }
-
-    public void setCanLike(boolean canLike) {
-        this.canLike = canLike;
-    }
-
-    public boolean isCanPublish() {
-        return canPublish;
-    }
-
-    public void setCanPublish(boolean canPublish) {
-        this.canPublish = canPublish;
-    }
-
     public int getRepostsCount() {
         return repostsCount;
     }
@@ -267,14 +187,6 @@ public class Post {
 
     public void setCanEdit(boolean canEdit) {
         this.canEdit = canEdit;
-    }
-
-    public boolean isPinned() {
-        return pinned;
-    }
-
-    public void setPinned(boolean pinned) {
-        this.pinned = pinned;
     }
 
     public boolean isMarkedAsAd() {

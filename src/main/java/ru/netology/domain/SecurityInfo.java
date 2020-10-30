@@ -1,6 +1,6 @@
 package ru.netology.domain;
 
-public class Security {
+public class SecurityInfo {
     private boolean friendsOnly;
     private String commentButton;
     private boolean canPin;

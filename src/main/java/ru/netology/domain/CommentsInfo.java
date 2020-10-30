@@ -1,14 +1,12 @@
 package ru.netology.domain;
 
-public class Comment {
+public class CommentsInfo {
 
     private int countComments;
     private boolean canCommentPost;  //    может ли текущий пользователь комментировать запись
     private boolean groupsCanCommentPost; //    могут ли сообщества комментировать запись
     private boolean canCloseComments;   //    может ли текущий пользователь закрыть комментарии к записи
     private boolean canOpenComments;//    может ли текущий пользователь открыть комментарии к записи
-
-
 
     public int getCountComments() {
         return countComments;

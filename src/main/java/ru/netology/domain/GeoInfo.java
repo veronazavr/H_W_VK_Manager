@@ -1,6 +1,6 @@
 package ru.netology.domain;
 
-public class Geo {
+public class GeoInfo {
     private String type;
     private String coordinates;
     private int idPlace;
